@@ -1,0 +1,55 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px; /* Max width for larger screens */
+  margin: auto; /* Center the container */
+}
+
+.dashboard-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Full width */
+  margin-bottom: 20px; /* Space between info and chart */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+.dashboard-info p {
+  flex: 1; /* Make paragraphs flex */
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center text */
+  font-size: 1.2em; /* Adjust font size */
+}
+
+.chart-container {
+  width: 100%; /* Full width for the chart */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+@media (max-width: 768px) {
+  .dashboard-info {
+    flex-direction: column; /* Stack on smaller screens */
+    align-items: center; /* Center items */
+  }
+
+  .dashboard-info p {
+    margin-bottom: 10px; /* Space between stacked items */
+  }
+}
+
+.dashboard-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px; /* Control size */
+  margin: 20px auto;
+  text-align: center;
+}
+
+.dashboard-info {
+  margin-bottom: 20px;
+}

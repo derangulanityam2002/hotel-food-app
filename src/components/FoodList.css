@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.food-list-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem; /* Fluid padding */
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: auto; /* Centering */
+}
+
+.food-list {
+  flex: 2; /* Take more space */
+  padding-right: 2rem; /* Space between food list and cart */
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem; /* Fluid padding */
+  margin-bottom: 1rem; /* Fluid margin */
+  border-radius: 0.5rem; /* Fluid border radius */
+  border: 1px solid #ddd;
+  font-size: 1rem; /* Fluid font size */
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem; /* Fluid margin */
+}
+
+.sort-buttons button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.8rem; /* Fluid padding */
+  margin-left: 0.5rem; /* Fluid margin */
+  cursor: pointer;
+  border-radius: 0.5rem; /* Fluid border radius */
+  font-size: 1rem; /* Fluid font size */
+}
+
+.sort-buttons button:hover {
+  background-color: #45a049;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Fluid gap */
+}
+
+.food-card {
+  background-color: #fff;
+  border-radius: 0.5rem; /* Fluid border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 1rem); /* Responsive width */
+  text-align: center;
+  padding: 1rem; /* Fluid padding */
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+.food-image {
+  width: 100%;
+  height: auto; /* Fluid height */
+  max-height: 200px; /* Maximum height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.add-to-cart-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 0.8rem; /* Fluid padding */
+  margin-top: 0.5rem; /* Fluid margin */
+  cursor: pointer;
+  border-radius: 0.5rem; /* Fluid border radius */
+  width: 100%;
+  font-size: 1rem; /* Fluid font size */
+}
+
+.add-to-cart-button:hover {
+  background-color: #ff4500;
+}
+
+.cart-container {
+  flex: 1; /* Take less space */
+  background-color: #f8f9fa;
+  padding: 2rem; /* Fluid padding */
+  border-radius: 0.5rem; /* Fluid border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 250px; /* Minimum width */
+}
+
+.cart-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0; /* Fluid padding */
+  border-bottom: 1px solid #ddd;
+}
+
+.remove-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem; /* Fluid padding */
+  cursor: pointer;
+  border-radius: 0.5rem; /* Fluid border radius */
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}
+
+.total-bill {
+  margin-top: 1rem; /* Fluid margin */
+  font-size: 1.2rem; /* Fluid font size */
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .food-card {
+    width: calc(50% - 1rem); /* 2 cards per row */
+  }
+
+  .food-list-container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .cart-container {
+    width: 100%; /* Full width on small screens */
+    margin-top: 2rem; /* Margin above cart */
+  }
+}
+
+@media (max-width: 480px) {
+  .food-card {
+    width: 100%; /* 1 card per row */
+  }
+
+  .sort-buttons button {
+    padding: 0.5rem; /* Adjust padding for smaller buttons */
+  }
+
+  .remove-button {
+    padding: 0.5rem; /* Adjust padding for smaller buttons */
+  }
+}
